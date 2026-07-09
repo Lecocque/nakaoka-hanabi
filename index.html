@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 長岡花火之旅</title>
     <style>
-        /* 基礎設定與長岡煙火背景 */
+        /* 基礎設定與長岡煙火背景 (使用 Unsplash 公開高畫質煙火圖) */
         body {
             font-family: 'Helvetica Neue', Helvetica, 'PingFang TC', 'LiHei Pro', '微軟正黑體', Arial, sans-serif;
-            background-image: url('http://googleusercontent.com/image_collection/image_retrieval/1856786747184286929');
+            background-image: url('https://images.unsplash.com/photo-1498354178607-a79df2916198?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -19,11 +19,11 @@
             margin: 0 auto;
         }
         
-        /* 標題設計 (增加深色半透明背景讓字體在煙火圖上更清楚) */
+        /* 標題設計 */
         h1 {
             text-align: center;
             color: #ffffff;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.65);
             padding: 15px;
             border-radius: 12px;
             margin-bottom: 30px;
@@ -31,7 +31,7 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* 卡片設計與動畫 (稍微增加透明度讓背景隱約透出) */
+        /* 卡片設計與動畫 */
         .day-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 12px;
@@ -95,20 +95,6 @@
             transform: scale(1.02);
         }
 
-        /* 地圖區塊設計 */
-        .map-container {
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-top: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        iframe {
-            width: 100%;
-            height: 250px;
-            border: none;
-        }
-
         /* 底部 */
         .footer {
             text-align: center;
@@ -131,25 +117,15 @@
     <div class="day-card card-1">
         <h2 class="day-title">Day 1：東京集合</h2>
         
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/17637757717829576608" alt="東京車站" class="photo-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Tokyo_Station_Marunouchi_Building_20121014.jpg/800px-Tokyo_Station_Marunouchi_Building_20121014.jpg" alt="東京車站" class="photo-box">
 
         <div class="event">
             <div class="time">15:00</div>
-            <div class="desc">
-                大家集合在東京，東橫藏前二號店辦理入住
-                <div class="map-container">
-                    <iframe src="https://maps.google.com/maps?q=東橫INN東京淺草藏前2號店&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-                </div>
-            </div>
+            <div class="desc">大家集合在東京，東橫藏前二號店辦理入住</div>
         </div>
         <div class="event">
             <div class="time">18:00</div>
-            <div class="desc">
-                Peter Luger 牛排
-                <div class="map-container">
-                    <iframe src="https://maps.google.com/maps?q=Peter+Luger+Steak+House+Tokyo&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-                </div>
-            </div>
+            <div class="desc">Peter Luger 牛排</div>
         </div>
         <div class="event">
             <div class="time">22:00</div>
@@ -160,7 +136,7 @@
     <div class="day-card card-2">
         <h2 class="day-title">Day 2：前往新潟</h2>
         
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/11373861233114909797" alt="新潟車站" class="photo-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/JR_Niigata_Station_Bandai_Square.jpg/800px-JR_Niigata_Station_Bandai_Square.jpg" alt="新潟車站" class="photo-box">
 
         <div class="event">
             <div class="time">08:30</div>
@@ -172,12 +148,7 @@
         </div>
         <div class="event">
             <div class="time">15:00</div>
-            <div class="desc">
-                東橫INN 新潟站前辦理 Check-in
-                <div class="map-container">
-                    <iframe src="https://maps.google.com/maps?q=東橫INN+新潟站前&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-                </div>
-            </div>
+            <div class="desc">東橫INN 新潟站前辦理 Check-in</div>
         </div>
         <div class="event">
             <div class="time">16:00</div>
@@ -191,66 +162,3 @@
 
     <div class="day-card card-3">
         <h2 class="day-title">Day 3：長岡花火大會</h2>
-        
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/1997049964584109602" alt="長岡鳳凰煙火" class="photo-box">
-
-        <div class="event">
-            <div class="time">早上</div>
-            <div class="desc">新潟縣巡禮</div>
-        </div>
-        <div class="event">
-            <div class="time">12:00</div>
-            <div class="desc">新潟站前豬排飯</div>
-        </div>
-        <div class="event">
-            <div class="time">15:00</div>
-            <div class="desc">新潟站附近超市採購</div>
-        </div>
-        <div class="event">
-            <div class="time">17:00</div>
-            <div class="desc">新潟站出發</div>
-        </div>
-        <div class="event">
-            <div class="time">18:00</div>
-            <div class="desc">
-                長岡站計程車排隊，散佈置會場
-                <div class="map-container">
-                    <iframe src="https://maps.google.com/maps?q=長岡駅&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <div class="time">19:30</div>
-            <div class="desc">長岡花火觀賞 🎆</div>
-        </div>
-        <div class="event">
-            <div class="time">21:15</div>
-            <div class="desc">煙火結束</div>
-        </div>
-        <div class="event">
-            <div class="time">22:30</div>
-            <div class="desc">回到新潟站</div>
-        </div>
-    </div>
-
-    <div class="day-card card-4">
-        <h2 class="day-title">Day 4：返回東京</h2>
-        
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/5272978661132368415" alt="新幹線朱鷺號" class="photo-box">
-
-        <div class="event">
-            <div class="time">09:12</div>
-            <div class="desc">上越新幹線回東京</div>
-        </div>
-        <div class="event">
-            <div class="time">10:47</div>
-            <div class="desc">抵達東京站</div>
-        </div>
-    </div>
-
-    <div class="footer">
-        ✈️ 我們十月曼谷見，謝謝大家！
-    </div>
-
-</body>
-</html>
