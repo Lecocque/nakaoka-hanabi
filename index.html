@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 長岡花火之旅</title>
     <style>
-        /* 基礎設定 */
+        /* 基礎設定與長岡煙火背景 */
         body {
             font-family: 'Helvetica Neue', Helvetica, 'PingFang TC', 'LiHei Pro', '微軟正黑體', Arial, sans-serif;
-            background-color: #f5f7fa;
+            background-image: url('http://googleusercontent.com/image_collection/image_retrieval/1856786747184286929');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: #333;
             line-height: 1.6;
             padding: 20px;
@@ -16,24 +19,26 @@
             margin: 0 auto;
         }
         
-        /* 標題設計 */
+        /* 標題設計 (增加深色半透明背景讓字體在煙火圖上更清楚) */
         h1 {
             text-align: center;
-            color: #2c3e50;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 12px;
             margin-bottom: 30px;
             font-size: 28px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* 卡片設計與動畫 */
+        /* 卡片設計與動畫 (稍微增加透明度讓背景隱約透出) */
         .day-card {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 25px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
             border-left: 5px solid #3498db;
-            /* 動畫設定 */
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 0.8s ease-out forwards;
@@ -52,7 +57,7 @@
         .day-title {
             color: #2c3e50;
             margin-top: 0;
-            border-bottom: 2px dashed #eee;
+            border-bottom: 2px dashed #ccc;
             padding-bottom: 10px;
             font-size: 22px;
         }
@@ -79,6 +84,8 @@
         /* 照片區塊設計 */
         .photo-box {
             width: 100%;
+            height: 250px;
+            object-fit: cover;
             border-radius: 8px;
             margin: 10px 0;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -109,10 +116,11 @@
             padding: 20px;
             font-weight: bold;
             color: #27ae60;
-            background: #eafaf1;
+            background: rgba(234, 250, 241, 0.95);
             border-radius: 8px;
             animation: fadeInUp 0.8s ease-out 1s forwards;
             opacity: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -123,7 +131,7 @@
     <div class="day-card card-1">
         <h2 class="day-title">Day 1：東京集合</h2>
         
-        <img src="https://picsum.photos/id/412/800/400" alt="東京風景" class="photo-box">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/17637757717829576608" alt="東京車站" class="photo-box">
 
         <div class="event">
             <div class="time">15:00</div>
@@ -152,7 +160,7 @@
     <div class="day-card card-2">
         <h2 class="day-title">Day 2：前往新潟</h2>
         
-        <img src="https://picsum.photos/id/234/800/400" alt="新幹線" class="photo-box">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/11373861233114909797" alt="新潟車站" class="photo-box">
 
         <div class="event">
             <div class="time">08:30</div>
@@ -184,7 +192,7 @@
     <div class="day-card card-3">
         <h2 class="day-title">Day 3：長岡花火大會</h2>
         
-        <img src="https://picsum.photos/id/327/800/400" alt="花火大會" class="photo-box">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/1997049964584109602" alt="長岡鳳凰煙火" class="photo-box">
 
         <div class="event">
             <div class="time">早上</div>
@@ -228,6 +236,8 @@
     <div class="day-card card-4">
         <h2 class="day-title">Day 4：返回東京</h2>
         
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/5272978661132368415" alt="新幹線朱鷺號" class="photo-box">
+
         <div class="event">
             <div class="time">09:12</div>
             <div class="desc">上越新幹線回東京</div>
