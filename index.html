@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 長岡花火之旅</title>
+    <style>
+        /* 基礎設定 */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang TC', 'LiHei Pro', '微軟正黑體', Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* 標題設計 */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* 卡片設計與動畫 */
+        .day-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #3498db;
+            /* 動畫設定 */
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        /* 設定不同卡片的動畫延遲，做出階梯式浮現效果 */
+        .card-1 { animation-delay: 0.1s; border-left-color: #3498db; }
+        .card-2 { animation-delay: 0.3s; border-left-color: #e67e22; }
+        .card-3 { animation-delay: 0.5s; border-left-color: #9b59b6; }
+        .card-4 { animation-delay: 0.7s; border-left-color: #2ecc71; }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .day-title {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 2px dashed #eee;
+            padding-bottom: 10px;
+            font-size: 22px;
+        }
+
+        /* 時間軸與事件 */
+        .event {
+            display: flex;
+            margin-top: 15px;
+            align-items: flex-start;
+        }
+        .time {
+            font-weight: bold;
+            color: #e74c3c;
+            width: 65px;
+            flex-shrink: 0;
+            font-size: 15px;
+            padding-top: 2px;
+        }
+        .desc {
+            flex-grow: 1;
+            font-size: 16px;
+        }
+
+        /* 照片區塊設計 */
+        .photo-box {
+            width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .photo-box:hover {
+            transform: scale(1.02);
+        }
+
+        /* 地圖區塊設計 */
+        .map-container {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+
+        /* 底部 */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-weight: bold;
+            color: #27ae60;
+            background: #eafaf1;
+            border-radius: 8px;
+            animation: fadeInUp 0.8s ease-out 1s forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎆 2026 長岡花火之旅手冊</h1>
+
+    <div class="day-card card-1">
+        <h2 class="day-title">Day 1：東京集合</h2>
+        
+        <img src="https://picsum.photos/id/412/800/400" alt="東京風景" class="photo-box">
+
+        <div class="event">
+            <div class="time">15:00</div>
+            <div class="desc">
+                大家集合在東京，東橫藏前二號店辦理入住
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=東橫INN東京淺草藏前2號店&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="event">
+            <div class="time">18:00</div>
+            <div class="desc">
+                Peter Luger 牛排
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=Peter+Luger+Steak+House+Tokyo&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="event">
+            <div class="time">22:00</div>
+            <div class="desc">居酒屋敘舊</div>
+        </div>
+    </div>
+
+    <div class="day-card card-2">
+        <h2 class="day-title">Day 2：前往新潟</h2>
+        
+        <img src="https://picsum.photos/id/234/800/400" alt="新幹線" class="photo-box">
+
+        <div class="event">
+            <div class="time">08:30</div>
+            <div class="desc">飯店計程車集體出發東京站</div>
+        </div>
+        <div class="event">
+            <div class="time">09:12</div>
+            <div class="desc">上越新幹線前往新潟</div>
+        </div>
+        <div class="event">
+            <div class="time">15:00</div>
+            <div class="desc">
+                東橫INN 新潟站前辦理 Check-in
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=東橫INN+新潟站前&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="event">
+            <div class="time">16:00</div>
+            <div class="desc">自由行（公雞跟 Hima 前往長岡收看第一次的煙火）</div>
+        </div>
+        <div class="event">
+            <div class="time">22:00</div>
+            <div class="desc">公雞跟 Hima 回來，居酒屋大家行前會</div>
+        </div>
+    </div>
+
+    <div class="day-card card-3">
+        <h2 class="day-title">Day 3：長岡花火大會</h2>
+        
+        <img src="https://picsum.photos/id/327/800/400" alt="花火大會" class="photo-box">
+
+        <div class="event">
+            <div class="time">早上</div>
+            <div class="desc">新潟縣巡禮</div>
+        </div>
+        <div class="event">
+            <div class="time">12:00</div>
+            <div class="desc">新潟站前豬排飯</div>
+        </div>
+        <div class="event">
+            <div class="time">15:00</div>
+            <div class="desc">新潟站附近超市採購</div>
+        </div>
+        <div class="event">
+            <div class="time">17:00</div>
+            <div class="desc">新潟站出發</div>
+        </div>
+        <div class="event">
+            <div class="time">18:00</div>
+            <div class="desc">
+                長岡站計程車排隊，散佈置會場
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=長岡駅&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="event">
+            <div class="time">19:30</div>
+            <div class="desc">長岡花火觀賞 🎆</div>
+        </div>
+        <div class="event">
+            <div class="time">21:15</div>
+            <div class="desc">煙火結束</div>
+        </div>
+        <div class="event">
+            <div class="time">22:30</div>
+            <div class="desc">回到新潟站</div>
+        </div>
+    </div>
+
+    <div class="day-card card-4">
+        <h2 class="day-title">Day 4：返回東京</h2>
+        
+        <div class="event">
+            <div class="time">09:12</div>
+            <div class="desc">上越新幹線回東京</div>
+        </div>
+        <div class="event">
+            <div class="time">10:47</div>
+            <div class="desc">抵達東京站</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        ✈️ 我們十月曼谷見，謝謝大家！
+    </div>
+
+</body>
+</html>
